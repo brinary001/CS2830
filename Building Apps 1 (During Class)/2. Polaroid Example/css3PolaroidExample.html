@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to use the z-index properly. -->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Polaroid Example</title>
+	<style>
+        /* CSS3 font */
+        @font-face {
+            font-family: myFont;
+            src: url("fonts/PermanentMarker.ttf"); 
+        }
+        body {
+            margin: 30px;
+            background-color: #E9E9E9;
+        }
+        .polaroid {
+        	
+           
+            width: 520px;
+            padding: 10px 10px 20px 10px;
+            text-align: center;
+            border: 1px solid #888;
+            background-color: white;
+            font-size: 16pt;
+           
+
+            /* CSS3 font */
+            font-family: myFont;
+
+            /* CSS3 transition */
+            transition: transform .3s;
+        }
+        .polaroid:hover {
+            z-index: 1;
+
+            /* CSS3 transformations */
+            transform: rotate(0deg);
+
+            /* CSS3 box-shadow */
+            box-shadow: 0 0 10px #555;
+        }  
+        /* CSS3 transformations */
+        .rotateLeft {
+            transform: rotate(-8deg);
+        }
+        .rotateRight {
+            transform: rotate(7deg);
+        }
+        
+        
+        img {
+            height: 400px;
+            width: 500px; 
+        }
+        .inline {
+            display: inline-block; 
+        }
+        @keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(1720deg);
+            }
+        }
+        #polaroidSpin:hover {
+            /* To apply the animation: */
+            -webkit-animation: roll 2s; /* Chrome, Safari, Opera */
+            animation: roll 2s; /* standard syntax */
+        }
+	</style>
+</head>
+<body>
+    <div class="inline">
+	<div class="polaroid rotateLeft inline">
+		<img src="images/shanghai2.jpg" alt="pic1">
+        <h2>Shanghai, China</h2>
+	</div>
+	<div class="polaroid rotateRight inline">
+		<img src="images/golden.jpg" alt="pic2">
+        <h2>Golden Gate Bridge</h2>
+	</div>
+    <div class="polaroid rotateRight inline">
+		<img src="images/grand.jpg" alt="pic3">
+        <h2>Grand Canyon Arizona</h2>
+	</div>
+    <div id="polaroidSpin" class="polaroid rotateLeft inline">
+		<img src="images/missouri.jpg" alt="pic4">
+        <h2>Fall In Missouri</h2>
+	</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+    name: Aaron Henry
+    pawprint: ahx97
+    date: 9-25-17
+-->
+
+<head>
+        <meta charset="UTF-8">
+            <title>Ahx97 Challange6</title>
+    </head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        textarea{
+            width: 300px;
+            height: 200px;
+            border: 1px solid lightgray;
+            background-color:beige;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 5px lightgray;
+        }
+        
+        h1, h2{
+            text-align: center;
+            color: skyblue;
+        }
+        
+        button{
+            border-radius: 5px;
+            margin-left: 10px;
+            color: white;
+            background-color: skyblue;
+        }
+        
+        #textAreas{
+            float: left; 
+        }
+        
+        #previewPane{
+            height: 420px;
+            width: 300px;
+            background-color: beige;
+            border-radius: 10px;
+            border: 1px solid grey;
+            float: left;
+            box-shadow: 10px 10px 10px lightgray;
+        }
+        
+        
+    </style>
+
+    <body>
+    
+        <h1>
+            Sixth Challenge
+        </h1>
+         <div class="wrapper">
+             
+            <div id="textAreas">
+                <textarea id="cssTextArea" ondblclick="cssFunction()"  placeholder="CSS...."></textarea>
+                <br>
+                <textarea id="htmlTextArea" ondblclick="htmlFunction()" placeholder="HTML...."></textarea>
+                
+            </div>
+                <div id="previewPane">
+                    
+                </div>
+             
+         </div>
+        
+    
+        <button type="button" onclick="launchFunction()">Launch</button>
+        
+        <button type="button" onclick="toggleFunction">Toggle</button>
+        
+        <button type="button" onclick="clearFunction()">Clear</button>
+        
+        <h2>Created By: Aaron</h2>
+        
+        
+        <script>
+            function cssFunction() {
+                document.getElementById("cssTextArea").value = "h4 { color: green; } p { font-family: cursive, arial; font-size: 22pt;}";
+            }
+            
+            function htmlFunction(){
+                document.getElementById("htmlTextArea").value = "<h4> Hello World! </h4> <p> is it applied? </p>";
+            }
+            
+            function launchFunction(){                  document.getElementById("previewPane").innerHTML=document.getElementById("htmlTextArea").value;
+            }
+            
+            function toggleFunction(){
+                document.getElementById("previewPane").css=document.getElementById("cssTextArea").value
+            }
+            
+            function clearFunction(){
+                document.getElementById("htmlTextArea").value=null;
+                document.getElementById("cssTextArea").value=null;
+            }
+            
+            
+        </script>
+        
+    </body>
+</html>
+

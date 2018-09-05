@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Box Model</title>
+        <!--
+          References
+            http://www.w3schools.com/css/css_boxmodel.asp
+            http://guyroutledge.github.io/box-model/
+        -->
+        <style>
+            #boxModel {
+                border: 10px solid powderblue;
+                width: 250px;
+                margin: 50px;
+                padding: 100px;
+                padding-right: 0; /*order matters */
+                background-color: orange; /*bg color includes the content and the padding */
+                
+                text-align: center;
+            }
+            
+            /* content width = 250px
+            
+                Physical width: 
+                    250px -> content width
+                    100px -> padding on left
+                    20px -> border (10px on left and 10px on right)
+                    100px -> margin (50px on left and 50px on right)
+            ------------------------------
+                = 470px
+            
+            */
+           
+        </style>
+    </head>
+    <body>
+      <div id = "boxModel">CSS Box model</div>
+      
+    </body>
+</html>

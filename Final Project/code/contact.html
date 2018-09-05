@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <title>Contact Me</title>
+    <!--THE CODE USED IN THIS DOC TO BUILD THE NAV BAR AND LISTS WERE BUILT BY REFERRING TO W3 SCHOOLS' EXAMPLES-->
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+        <meta charset="utf-8">
+        <style>
+            ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            font-family: 'Sue Ellen Francisco', cursive;
+            font-size: 42px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+            }
+        </style>
+    </head>
+    
+<body>
+    <div class = "logo"></div><img alt src = "Images/logo_final.jpg" width = "1600" height = "">
+        
+        <ul>
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="nutrition.html">Nutrition & Fitness</a></li>
+          <li><a href="#mentalHealth">Mental Health & Spiritual</a></li>
+          <li><a href="#ecoFriendly">Eco-Friendly</a></li>
+          <li><a href="#house">Around The House</a></li>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+    
+    <form action="mailto:katierob1015@gmail.com>" method="post" enctype="text/plain" style="text-align: center">
+        <!--FORM TAKEN FROM W3 SCHOOLS!-->
+        <br><br>
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <textarea rows="10" cols="50"></textarea>
+            <br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+    </form> 
+    </body>
+</html>

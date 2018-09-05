@@ -1,0 +1,7 @@
+/* This document was created by Professor Wergeles for CS2830 at the University of Missouri */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

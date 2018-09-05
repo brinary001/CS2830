@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to collect data from radio buttons using a for loop 
+		instead of get the data one by one. This code also shows you how to change the 
+		selected radio button with JavaScript --> 
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_checkbox_checked.asp
+        2) http://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Radio Data</title>
+        
+    </head>
+    <body>
+        <form action="#" method="POST">
+           
+            <!-- Radio Buttons -->
+            <h3>What is your favorite dinosaur?</h3>
+            <div>
+                <input id="raptor" type="radio" name="dinosaurs" value="velociraptor" checked>
+                <label for="raptor">Velociraptor</label>
+            </div>
+            <div>
+                <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+                <label for="iguanodon">Iguanodon</label>
+            </div>
+            <div>
+                <input id="trex" type="radio" name="dinosaurs" value="trex">
+                <label for="trex">Trex</label>
+            </div>
+            
+            <hr>
+		
+            <button type="button" >Get Radio</button>
+            <button type="button" >Set Radio</button>
+            <button type="button" >Get All Radio</button>
+            
+        </form>
+    </body>
+</html>

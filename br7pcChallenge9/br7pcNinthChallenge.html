@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--Brian Robinson
+    br7pc
+    Challenge 9
+    11/6/17
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge 9</title>
+        
+        <style>
+        /*#loader {
+            display: none;
+        }
+        .loadNode {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 100%;
+            margin: 10px 5px;
+            transition: background-color .2s;
+        }
+        .loadNode:nth-of-type(1) {
+            background-color: #aaa;
+        }
+        .loadNode:nth-of-type(2) {
+            background-color: #777;
+        }
+        .loadNode:nth-of-type(3) {
+            background-color: #333;
+        }*/
+    </style>
+
+        <script>
+            
+        /*function getContent(){
+            
+            var xmlHttp = new XMLHttpRequest();
+            
+            xmlHttp.onreadystatechange = function(){
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    //when we get a response back, hide the loading icon
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("contentBox").innerHTML = xmlHttp.responseText;
+                    
+                }
+            };
+            
+            //when a new ajax request is made, show the loading icon and clear the contentBox
+            document.getElementById("loader").style.display = "block";
+            document.getElementById("contentBox").innerHTML = "";
+            
+            xmlHttp.open("GET", "responder.php", true);
+            xmlHttp.send();
+            
+            
+        }
+		
+        var tick = 1;
+            
+        function setInterval() {
+            var loadNodes = document.querySelectorAll(".loadNode");
+            if (tick == 1) {
+                backgroundColors = ["#333", "#aaa", "#777"];
+                tick = 2;
+            }
+            else if (tick == 2) {
+                backgroundColors = ["#777", "#333", "#aaa"];
+                tick = 3
+            }
+            else {
+                backgroundColors = ["#aaa", "#777", "#333"];
+                tick = 1;
+            }
+            loadNodes[0].style.backgroundColor = backgroundColors[0];
+            loadNodes[1].style.backgroundColor = backgroundColors[1];
+            loadNodes[2].style.backgroundColor = backgroundColors[2];
+        }, 200);*/
+
+            
+            function getPokemon() {
+		    var xmlHttp = new XMLHttpRequest();
+		
+		    xmlHttp.onload = function() {
+			if (xmlHttp.status == 200) {
+				
+                //key for challenge 9
+                var xmlDoc = xmlHttp.responseXML
+                
+                var output = "";
+                
+                //build output by parsing the xml
+                var type = xmlDoc.getElementsByTagName("type");
+                var name = xmlDoc.getElementsByTagName("name");
+                
+                // in challenge 9 you will need to get two elements by tag name
+                console.dir(type);
+                console.dir(name);
+                
+                for (var i = 0; i < name.length; i++) {
+                    output += name[i].childNodes[0].nodeValue + " is type: " + type[i].childNodes[0].nodeValue +"<br>";
+                }
+                
+                /*for (var i = 0; i < type.length; i++) {
+                    output += name[i].childNodes[0].nodeValue + type[i].childNodes[0].nodeValue + "<br>";
+                }*/
+
+                var divObj = document.getElementById("typeBox");
+                
+                divObj.innerHTML = output;
+                
+				
+			}
+		}
+            xmlHttp.open("GET", "pokemon.xml", true); //pokemon.xml -> instance address
+		    xmlHttp.send();
+        }
+            
+            function getEvo() {
+		    var xmlHttp = new XMLHttpRequest();
+		
+		    xmlHttp.onload = function() {
+			if (xmlHttp.status == 200) {
+				
+                //key for challenge 9
+                var xmlDoc = xmlHttp.responseXML
+                
+                var output = "";
+                
+                //build output by parsing the xml
+                var evo = xmlDoc.getElementsByTagName("evolution");
+                var name = xmlDoc.getElementsByTagName("name");
+                
+                // in challenge 9 you will need to get two elements by tag name
+                console.dir(evo);
+                console.dir(name);
+                
+                for (var i = 0; i < evo.length; i++) {
+                    output += name[i].childNodes[0].nodeValue +  " evolves to " + evo[i].childNodes[0].nodeValue + "<br>";
+                }
+                /*for (var i = 0; i < name.length; i++) {
+                    output += name[i].childNodes[0].nodeValue + "<br>";    
+                }*/
+                
+                var divObj = document.getElementById("evoBox");
+                
+                divObj.innerHTML = output;
+				
+				
+			}
+		}
+            xmlHttp.open("GET", "pokemon.xml", true); //pokemon.xml -> instance address
+		    xmlHttp.send();
+        }
+            
+            function getGrowth() {
+		    var xmlHttp = new XMLHttpRequest();
+		
+		    xmlHttp.onload = function() {
+			if (xmlHttp.status == 200) {
+				
+                //key for challenge 9
+                var xmlDoc = xmlHttp.responseXML
+                
+                var output = "";
+                
+                //build output by parsing the xml
+                var growth = xmlDoc.getElementsByTagName("growth");
+                var name = xmlDoc.getElementsByTagName("name");
+                
+                // in challenge 9 you will need to get two elements by tag name
+                console.dir(growth);
+                console.dir(name);
+                
+                for (var i = 0; i < growth.length; i++) {
+                    output += name[i].childNodes[0].nodeValue +  " has a growth rate of " + growth[i].childNodes[0].nodeValue + "<br>";
+                }
+                /*for (var i = 0; i < name.length; i++) {
+                    output += name[i].childNodes[0].nodeValue + "<br>";    
+                }*/
+                
+                var divObj = document.getElementById("growthBox");
+                
+                divObj.innerHTML = output;
+				
+				
+			}
+		}
+            xmlHttp.open("GET", "pokemon.xml", true); //pokemon.xml -> instance address
+		    xmlHttp.send();
+        }
+
+        </script>
+
+    </head>
+    
+        <body>
+            <h1>Pokemon by type</h1>
+            <div id="typeBox"></div>
+            <button type="button" onclick="getPokemon()">XML PokeType</button>
+            <h2>Pokemon by evolution</h2>
+            <div id="evoBox"></div>
+            <button type="button" onclick="getEvo()">XML PokeEvo</button>
+            <h3>Pokemon by growth</h3>
+            <div id="growthBox"></div>
+            <button type="button" onclick="getGrowth()">PokeGrowth</button>
+        </body>
+    
+</html>

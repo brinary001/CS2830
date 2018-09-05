@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- This is a short version of the form we did last class -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <style>
+            p.center {
+                text-align: center; 
+            }
+            /*form {
+                border: 1px solid black; 
+            }*/
+        </style>
+    </head>
+    <body>
+    <!-- Note: Usually the form-data will be sent to a php page -->
+        <form action="#" method="POST">
+             
+            <!-- Text Input -->
+            <div>
+                 <label for="user">Username:</label>
+                <input id="user" type="text" name="username" placeholder="Username" maxlength="10">
+            </div>
+             
+            <!-- Password Input -->
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+            
+            
+            <!-- Radio Buttons -->
+            <h3>What is your favorite dinosaur?</h3>
+            <div>
+                <input id="raptor" type="radio" name="dinosaurs" value="velociraptor" checked>
+                <label for="raptor">Velociraptor</label>
+            </div>
+            <div>
+                <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+                <label for="iguanodon">Iguanodon</label>
+            </div>
+            <div>
+                <input id="trex" type="radio" name="dinosaurs" value="trex">
+                <label for="trex">Trex</label>
+            </div>
+            
+            
+            <!-- Checkboxes -->
+            <h3>What are your interests?</h3>
+            <div>
+                <input id="Coding" type="checkbox" name="interests[]" value="Coding" checked>
+                <label for="Coding">Coding</label>
+            
+                <br>
+                
+                <input id="sleeping" type="checkbox" name="interests[]" value="sleeping" checked>
+                <label for="sleeping">Sleeping</label>
+            
+                <br>
+                
+                <label for="wakeboarding">Wake Boarding</label>
+                <input id="wakeboarding" type="checkbox" name="interests[]" value="wakeboarding">
+                
+                <br>
+            
+                <label for="skating">Skateboarding</label>
+                <input id="skating" type="checkbox" name="interests[]" value="skating">
+            
+                <br>
+                
+                <label for="Drums">Drums and Percussion</label>
+                <input id="Drums" type="checkbox" name="interests[]" value="drums&percussion">
+            </div>
+            
+            
+            <!-- Multiple select, select is refered to as a drop-down list -->
+            <h3>What do you like to eat?</h3>
+            <select name="foods[]" multiple>
+                <option value="baozi">BaoZi</option>
+                <option value="chicken">Chicken</option>
+                <option value="creamPies">Oatmeal Cream Pies</option>
+                <option value="chickalfredo">Chicken Alfredo</option>
+                <option value="poptarts" selected>Poptarts</option>
+                <option value="cheese">Cheese</option> 
+            </select>
+            
+            
+            <p>This is a clickable button to do some action</p>
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+            
+            <!-- Textarea -->
+            <h3>Comments?</h3>
+            <div>
+                <textarea name="comments" rows="20" cols="40">I like CS2830... 
+                	but my instructor is kinda weird.</textarea>
+            </div>
+            
+            <br><br>
+            
+            <fieldset>
+                <legend>Personal Information: </legend>
+                <div>
+                    <label for="fname">First Name:</label>
+                    <input id="fname" type="text" name="firstname" placeholder="first name" autocomplete="on">
+                </div>
+                <div>
+                     <label for="email">Email:</label>
+                    <input id="email" type="text" name="email" placeholder="email" size="50">
+                </div>
+                <div>
+                    <label for="phoneNumber">Phone:</label>
+                    <input id="phoneNumber" type="text" name="phoneNumber">
+                </div>
+            </fieldset>
+
+            
+            <p>This is a datalist: </p>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="fireworks">fire</option>
+                <option value="Siri">siri</option>
+            </datalist> 
+
+            <br><br>
+            
+            <!-- Submit button -->
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>        
+    </body>
+</html>

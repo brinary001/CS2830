@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Note: Prior to the creation of CSS, HTML <table> elements were often used as a method
+			for page layout. This usage has been discouraged sicne HTML4. -->
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title>HTML Tables</title>
+        <!--
+            References:
+                
+                *** NOTE: 1 is a requried reading for the course, read the page and go 
+                			through all of the examples, they are labeled "try it yourself" 
+                			with a big grean button. Exercises are optional. **** 
+                
+                1) http://www.w3schools.com/html/html_tables.asp
+                
+                2) https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+                3) https://css-tricks.com/complete-guide-table-element/
+                4) https://css-tricks.com/how-nth-child-works/
+                5) https://css-tricks.com/examples/nth-child-tester/
+                6) https://css-tricks.com/useful-nth-child-recipies/
+                
+                7) http://www.w3.org/TR/html5/tabular-data.html#tabular-data
+        -->
+        <style>
+            #MizzouFootballTable th, #MizzouFootballTable td {
+                border: 3px solid black;
+                padding: 10px 20px;
+                font-size: 18pt;
+                height: 50px;
+            }
+            #MizzouFootballTable {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            img.mizzou {
+                width: 100px;
+                height: 100px;
+            }
+            
+            /* structural sudo class */
+            /*#MizzouFootballTable tr:nth-child(2n+1) {
+                background-color: goldenrod;
+            }
+            #MizzouFootballTable tr:nth-child(2n) {
+                background-color: darkgray;
+            }*/
+               #MizzouFootballTable .home {
+                background-color: goldenrod;
+            }
+            #MizzouFootballTable .away {
+                background-color: darkgray;
+            }
+            
+            .emphasizeLoss {
+                background-color: crimson;
+                color: white;
+            }
+            
+            .emphasizeWin {
+                background-color: limegreen;
+            }
+            
+            img {
+                vertical-align: middle;
+            }
+            .final_result {
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                
+                color: #fff;
+            /*    
+                font-size: 25px;
+                font-family: sans-serif;
+                font-style: italic;
+                font-weight: bold;
+              */
+            /*The above lines can be written as this: */    
+                font: italic bold 25px sans-serif;
+                
+                text-transform: uppercase;
+                padding: 8px;
+                text-align: cetner;
+            }
+            
+            final_result.win {
+                background: #090;
+            }
+            
+            final_result.loss {
+                background: #C00;
+            }
+            .header {
+                background-color: black;
+            }
+            #text {
+                color: goldenrod;
+                font-size: 36pt;
+            }
+        </style>
+    </head>
+    <body>
+    	
+        <table id = "MizzouFootballTable">
+        
+            <tr class = "header">
+                <th colspan = "6">
+                    <p>
+                    <img class = "mizzou" src = "images/mizzou.jpg" alt = "mizzou">
+                    Mizzou Football Schedule 2017
+                    <img class = "mizzou" src = "images/football.jpg" alt = "football">
+                    </p>
+                </th>
+            </tr>
+            <tr colspan = "2">
+                <th>Date Time</th>
+                <th>Event</th>
+                <th>Location</th>
+                <th>Team</th>
+                <th>Score</th>
+            </tr>
+            <tr class = "home">
+                <td>Sat Sep 2</td>
+                <td>11 AM</td>
+                <td></td>
+                <td>VS Missouri State</td>
+                <td>Bears</td>
+              <!--  <td class = "emphasizeWin">W 72 - 43</td> -->
+                <td><span class = "final_result win">win</span>72 - 43</td>
+                <img id = "thumbsup" src = "images/thumbsup.jpg" alt = "thumbsup"
+            </tr>
+            <tr class = "home">
+                <td>Sat Sep 9</td>
+                <td>6 PM</td>
+                <td></td>
+                <td>VS South Carolina</td>
+                <td>Gamecocks</td>
+                <td class = "emphasizeWin">Nick's prediction: W 24 - 7</td>
+            </tr>
+            <tr class = "home">
+                <td>Sat Sep 16</td>
+                <td>3 PM</td>
+                <td>Family Weekend</td>
+                <td>VS Purdue</td>
+                <td>Boilermakers</td>
+                <td class = "emphasizeLoss">Class Prediction: L</td>
+            </tr>
+            <tr class = "home">
+                <td>Sat Sep 23</td>
+                <td></td>
+                <td></td>
+                <td>VS Purdue</td>
+                <td>Boilermakers</td>
+            <!--    <td>Class Prediction: L</td> -->
+                <td><span class = "final_result win">win</span> 24 - 7
+                    <img id = "thumbsup" src = images/thumbsup.jpg" alt = "thumbsup""</td>
+            </tr>
+            <tr class = "home">
+                <td>Sat Sep 30</td>
+                <td></td>
+                <td>Gold Rush</td>
+                <td>VS Auburn</td>
+                <td>Tigers</td>
+                <td></td>
+            </tr>
+            <tr class = "away">
+                <td>Sat Oct 7</td>
+                <td></td>
+                <td></td>
+                <td>@ Kentucky</td>
+                <td>Wildcats</td>
+                <td></td>
+            </tr>
+            <tr class = "home">
+                <td>Sat Oct 21</td>
+                <!-- <td></td> -->
+                <td>Homecoming</td>
+                <td>VS Idaho</td>
+                <td>Vandals</td>
+                <td></td>
+            </tr>
+        </table>
+    	
+    	
+    </body>
+</html>

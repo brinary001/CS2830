@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References:
+		1) http://www.w3schools.com/js/js_objects.asp
+		2) http://www.w3schools.com/json/
+		3) https://en.wikipedia.org/wiki/JSON
+		4) http://www.json.org/
+-->
+<html>
+	<head>
+		<title>JavaScript Objects and JSON</title>
+		<script>
+           
+			var trainer = {
+                name: "Ash",
+                badges: 10,
+                pokemon: ["Pikachu", "Squirtle", "Jigglypuff"]
+            };
+            
+            console.dir(trainer);
+            
+            console.log("Hi " + trainer.name);
+            
+            console.log(trainer.name + " has " + trainer.badges + " badges");
+            
+            for (var i in trainer.pokemon) {
+                console.log(trainer.name + " has a " + trainer.pokemon[i]);
+            }
+            
+            var trainerJSON = JSON.stringify(trainer);
+            console.log(trainerJSON);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

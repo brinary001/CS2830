@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to get data from checked boxes, how to deselect 
+		particular checkboxes, using ternary operators, and how to toggle all 
+		checkboxes with a for loop --> 
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_checkbox_checked.asp
+        2) http://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Checkbox Data</title>
+        
+		
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Checkboxes -->
+            <h3>What are your interests?</h3>
+            <div>
+                <input id="Coding" type="checkbox" name="interests[]" value="Coding" checked>
+                <label for="Coding">Coding</label>
+            
+                <br>
+                
+                <input id="sleeping" type="checkbox" name="interests[]" value="sleeping" checked>
+                <label for="sleeping">Sleeping</label>
+            
+                <br>
+                
+                <label for="wakeboarding">Wake Boarding</label>
+                <input id="wakeboarding" type="checkbox" name="interests[]" value="wakeboarding">
+                
+                <br>
+            
+                <label for="skating">Skateboarding</label>
+                <input id="skating" type="checkbox" name="interests[]" value="skating">
+            
+                <br>
+                
+                <label for="Drums">Drums and Percussion</label>
+                <input id="Drums" type="checkbox" name="interests[]" value="drums&percussion">
+            </div>
+            
+            <hr>
+		
+            <button type="button" >Toggle Single Checkbox</button>
+            <button type="button" >Toggle All Checkboxes</button>
+            
+            
+             
+        </form>
+    </body>
+</html>

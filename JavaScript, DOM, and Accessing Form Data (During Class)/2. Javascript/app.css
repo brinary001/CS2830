@@ -1,0 +1,78 @@
+/* <!-- Created by Professor Wergeles for CS2830 at the University of Missouri --> */
+
+/* We can animate from one set of CSS declarations to another */
+@-webkit-keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1720deg);
+    }
+}
+
+
+
+/* ...or we can be more specific */
+@-webkit-keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(-25deg);
+    }
+    60% {
+        transform: rotate(30deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1.4, 1.4);
+    }
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(-25deg);
+    }
+    60% {
+        transform: rotate(30deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: scale(1.4, 1.4);
+    }
+}
+
+#animateMe {
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    margin: 80px auto;
+    font-size: 2.5em;
+    text-align: center;
+    background-color: orange;
+    color: white;
+
+    /* To apply the animation: */
+    -webkit-animation: wiggle 2s;
+    animation: wiggle 2s;
+}

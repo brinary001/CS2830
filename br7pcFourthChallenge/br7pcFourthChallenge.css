@@ -1,0 +1,44 @@
+
+#MovieTable th, #MovieTable td{
+    padding: 5px;
+    font-size: 16pt;
+    border: 3px solid black;
+    text-align: center;
+    font-family: cursive;
+}
+
+#MovieTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#MovieTable .odd {
+    text-align: center;
+}
+
+#timeHeader {
+    padding: 35px;
+    background-color: slategray;
+    color: papayawhip;
+    font-size: 28pt;
+}
+
+#tableHeader {
+    padding: 40px;
+    background-color: slategray;
+    color: papayawhip;
+    font-size: 35pt;
+}
+
+#tableTitles {
+    background-color: papayawhip;
+    color: balck;
+}
+
+.even {
+    background-color: dimgray;
+}
+
+img {
+    height: 150px;
+}

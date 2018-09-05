@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>AJAX Intro</title>
+	<script>
+        
+        // Reference: http://www.w3schools.com/ajax/default.asp
+		
+        function getContent() {
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_create.asp
+            //first create an XMLHTTPRequest object
+            var xmlHttp = new XMLHTTPRequest();
+            
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
+            
+                    // http://www.w3schools.com/ajax/ajax_xmlhttprequest_response.asp
+            //we need to set up what will happen when we get a response from the server        
+            xmlHttp.onreadystatechange = function(){
+                //if readyState is equal to 4 which means the server is ready and completed and we receive a status 200, the response is ready
+                if(xmlHttp.readystate == 4 && xmlHttp.status == 200) {
+                    
+                    //get response text
+                    var response = xmlHttp.responseText;
+                    
+                    //get the paragraph object
+                    var contentBox = document.getElementById("contentBox");
+                    
+                    //set contentBox's innerHTML to response from server
+                    contentBox.innerHTML = response;
+                }
+            };
+            
+            //you will want to do this for your challenge
+            document.getElementById("contentBox").innerHTML = "Loading...";
+            
+            // http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+            //specifying the type of request (GET/POST/etc.) and where it's going
+            xmlHttp.open("GET", "responder.php", true);
+            
+            //send the AJAX request
+            xmlHttp.send();
+           
+	</script>
+</head>
+<body>
+	<h1>Content</h1>
+	<p id="contentBox"></p>
+	<button type="button" onclick="getContent()">Get Content</button>
+</body>
+</html>

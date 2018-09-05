@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you some cool tricks with transitions, hover over transitions, 
+		and automatic sizing of elements -->
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title>CSS3 Transition Bullet Points</title>
+		<style>			
+            .bullet:nth-of-type(1) {
+                background: tomato;
+            }
+            .bullet:nth-of-type(2) {
+                background-color: yellow;
+            }
+            .bullet:nth-of-type(3) {
+                background-color: green;
+            }
+            
+            .bullet {
+                width: 200px;
+                height: 200px;
+                margin-top: 20px;
+                border-radius: 50%;
+                overflow: hidden;
+                
+                -webkit-transition: width 2s, height 2s, border-radius 2s;
+                transition: width 2s, height 2s, border-radius 2s;
+            }
+            /* test question */
+            .bullet > p {
+                color: rgba(0,0,0,0.25);
+                
+                -webkit-transition: color 2s, margin-left 2s;
+                
+                transition: all 2s;
+            }
+            .bullet:hover > p {
+                color: rgba(0,0,0,1);
+                
+                padding: 70px;
+                text-align: justify;
+            }
+            .bullet:hover {
+                width: 100%;
+                height: 300px;
+            }
+			
+		</style>
+	</head>
+	<body>
+		<div id="firstBullet" class="bullet">
+            <p>Computer science is the scientific and practical approach to computation 
+            	and its applications. It is the systematic study of the feasibility, 
+            	structure, expression, and mechanization of the methodical procedures 
+            	(or algorithms) that underlie the acquisition, representation, processing, 
+            	storage, communication of, and access to information. Some fields, such 
+            	as computational complexity theory, are highly abstract, while fields 
+            	such as <b>WEB DEVELOPMENET</b> emphasize real-world visual 
+            	applications.</p>
+		</div>
+		<div id="secondBullet" class="bullet">
+			<p>Information technology (IT) is the application of computers and internet 
+				to store, retrieve, transmit, and manipulate data, or information, often 
+				in the context of a business or other enterprise. IT is considered a 
+				subset of information and communications technology (ICT).</p>
+			</div>
+		<div id="thirdBullet" class="bullet">
+			<p>Web development is a broad term for the work involved in developing a web 
+			site for the Internet (World Wide Web) or an intranet (a private network). 
+			Web development can range from developing the simplest static single page of
+			plain text to the most complex web-based internet applications, electronic
+			businesses, and social network services.</p>
+		</div>
+	</body>
+</html>

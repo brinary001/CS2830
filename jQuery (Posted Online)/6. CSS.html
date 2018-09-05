@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jquery/jquery_css.asp
+		2) http://api.jquery.com/css/
+-->
+<html>
+	<head>
+		<title>jQuery CSS</title>
+		<script src="jslibs/jquery-2.1.4.min.js"></script>
+		<script>
+            
+			$(function() {
+                $(".quote").css("font-style", "italic");
+                
+                $("#header, #content").css("border", "2px solid cornflowerblue");
+                
+                $("#header h2").css("text-align", "center");
+                
+                $("#header").css("background-color", "beige");
+                $("#header").css("margin-bottom", "20px");
+                
+                $("#header")
+                    .css("background-color", "beige")
+                    .css("margin-bottom", "20px");
+                
+                $("#header").css({
+                    backgroundColor: "brown",
+                    marginBottom: "50px"
+                });
+                
+            });
+            
+            $(document).ready(function(){
+    			$("button").click(function(){
+        			alert("Background color = " + $("#header").css("background-color"));
+    			});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<h2>Lorem Ipsum</h2>
+		</div>
+		
+		<div id="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis odio at dolor auctor accumsan. Maecenas interdum ultricies pharetra. Ut cursus ultricies lectus in varius. Integer pharetra quam odio, ut volutpat ligula. Morbi dolor enim, posuere ut accumsan et, egestas vitae neque.</p>
+			
+			<p class="quote">"Aenean et elit sed ipsum imperdiet fringilla. Fusce a est nibh, in condimentum lacus. Nam sollicitudin viverra fringilla. Vestibulum consequat leo quis nunc consequat suscipit condimentum erat tempus."</p>
+			
+			<p>Morbi gravida, nibh in ornare commodo, quam ipsum gravida odio, sit amet eleifend tortor velit ut libero. In purus dolor, ultricies in lacinia sed, tempor ac lacus. Sed pellentesque, turpis at ullamcorper consequat, tellus ipsum feugiat risus, quis rhoncus lorem metus ut tortor. Pellentesque at sem sed nulla lobortis interdum in non felis.</p>
+			
+			<p class="quote">"Proin et magna nec lacus egestas faucibus. Pellentesque sem justo, iaculis et consectetur quis, sagittis ac mauris. Etiam malesuada fringilla porttitor."</p>
+		</div>
+		
+		<br>
+		<hr>
+		<br>
+		
+		<button>Return background-color of Header ID</button>
+	</body>
+</html>

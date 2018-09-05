@@ -1,0 +1,23 @@
+body {
+margin: 0;
+}
+h2 {
+margin-top: 0;
+margin-bottom: 40px;
+text-align: center;
+background-color: rgb(32, 99, 32);
+color: orange;
+box-shadow: 0 0 2px black;
+}
+#arena {
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+-webkit-column-count: 2;
+-moz-column-count: 2;
+column-count: 2;
+}
+img {
+width: 100%;
+}

@@ -1,0 +1,38 @@
+<pokedex>
+    <pokemon>
+        <name>Mew</name>
+        <evolution>None</evolution>
+        <type>Psychic</type>
+        <growth>Medium Slow</growth>
+    </pokemon>
+    <pokemon>
+        <name>Bulbasaur</name>
+        <evolution>Venusaur</evolution>
+        <type>Grass</type>
+        <growth>Medium Slow</growth>
+    </pokemon>
+        <pokemon>
+        <name>Charmander</name>
+        <evolution>Charizard</evolution>
+        <type>Fire</type>
+        <growth>Medium Slow</growth>
+    </pokemon>
+    <pokemon>
+        <name>Squirtle</name>
+        <evolution>Blastoise</evolution>
+        <type>Water</type>
+        <growth>Medium Slow</growth>
+    </pokemon>
+    <pokemon>
+        <name>Pikachu</name>
+        <evolution>Raichu</evolution>
+        <type>Electric</type>
+        <growth>Medium Fast</growth>
+    </pokemon>
+    <pokemon>
+        <name>Mewtwo</name>
+        <evolution>None</evolution>
+        <type>Psychic</type>
+        <growth>Slow</growth>
+    </pokemon>
+</pokedex>

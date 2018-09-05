@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jquery/html_prop.asp
+		2) http://api.jquery.com/prop/
+		3) http://api.jquery.com/jquery.each/
+-->
+<html>
+    <head>
+        <title>jQuery Radios</title>
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        <script> 
+            function getRadio() {
+                // Reference: http://api.jquery.com/attr/
+                console.log($("#raptor").prop("checked"));
+            }
+            function setRadio() {
+                $("#raptor").prop("checked", true);
+            }
+            function getAllRadio() {
+                $("input[name=dinosaurs]").each(function() {
+                    
+                    console.log(this); 
+                    
+                    console.log($(this));
+                     
+                    console.dir($(this).attr("id") + " = " + $(this).prop("checked"));
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <h3>What is your favorite dinosaur?</h3>
+            <div>
+                <input id="raptor" type="radio" name="dinosaurs" value="velociraptor" checked>
+                <label for="raptor">Velociraptor</label>
+            </div>
+            <div>
+                <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+                <label for="iguanodon">Iguanodon</label>
+            </div>
+            <div>
+                <input id="trex" type="radio" name="dinosaurs" value="trex">
+                <label for="trex">Trex</label>
+            </div>
+            <hr>
+            <button type="button" onclick="getRadio()">Get Radio</button>
+            <button type="button" onclick="setRadio()">Set Radio</button>
+            <button type="button" onclick="getAllRadio()">Get All Radio</button>
+        </form>
+    </body>
+</html>

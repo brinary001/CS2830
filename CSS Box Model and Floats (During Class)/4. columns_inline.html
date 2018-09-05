@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Columns Inline Block</title>
+        <style>
+         
+            /* Left physical width:
+                200px -> content width
+                + 4px -> border
+            ---------------------
+                204px
+            */
+            
+            #left {
+                display: inline-block;
+                width: 200px;
+                height: 250px;
+                border: 2px solid pink;
+            }
+            
+            /*middle and right physical width:
+                300px -> content width
+                + 4px -> border
+                -----------
+                304px
+            */
+            
+            #middle, #right {
+                display: inline-block;
+                width: 300px;
+                height: 250px;
+                border: 2px solid purple;
+            }
+            
+            /* Total physical width:
+                204px -> first
+                304px -> second
+                304px -> third
+            ----------------------
+                812px
+                + 4px -> inline white space
+                + 4px
+                ---------
+                820px
+            */
+            
+            #columns {
+                width: 820px;
+                border: 5px solid powderblue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+
+            <div id="right">Right</div>
+            
+            <!-- Note: Notice we do not need to clear like we did when using float -->
+            
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to collect data from Text Boxes from the form 
+		we created in class, how to change the text in text boxes, and how to determine 
+		the length of the text in a text box -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_option_value.asp
+        2) http://www.w3schools.com/jsref/jsref_length_string.asp
+        3) http://www.w3schools.com/js/js_output.asp
+        4) https://developers.google.com/web/tools/chrome-devtools/debug/console/?hl=en
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Accessing Text Data</title>
+        
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Text Input -->
+            <div>
+                <label for="user">Username:</label>
+                <input id="user" type="text" name="username" placeholder="Username">
+            </div>
+            
+            <!-- Password Input -->
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+            
+            <hr>
+            
+            <button type="button" >Get Username</button>
+            <button type="button" >Set Username</button>
+            <button type="button" >Check Password</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- This document was created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main purpose: Demonstrate CSS skills by using float and clear properties to put divs side by side
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Columns Float</title>
+        <style>
+            /* Left physical width:
+            
+                200px -> content width
+                + 4px -> border
+            --------------------------
+                204px
+            */
+            #left {
+                float: left;
+                width: 200px;
+                min-height: 250px;
+                border: 2px solid pink;
+            }
+            
+            /* Middle and right physical width 
+                300px -> content width
+                + 4px -> border
+            ---------------------------
+                304px
+            */
+            #middle, #right {
+                float: left;
+                width: 300px;
+                min-height: 250px;
+                border: 2px solid purple;
+            }
+            
+            #columns {
+                width: 812px;
+                border: 5px solid powderblue;
+            }
+            /* Note: This is one way to clear floats but not best practice */
+            .clear {
+                clear: both;
+            }
+            
+            /* Total physical width:
+                204px -> first div
+                304px -> second div
+                304px -> third div
+            -----------------
+                812px
+            */
+            
+            /* clear hack */
+            .group: after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            <div id="right">Right</div>
+            
+            
+            <!-- Below are two ways to clear float -->
+            <div class="clear"></div>
+            <br class="clear">
+        </div>
+    </body>
+</html>

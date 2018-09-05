@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+	<title>AJAX - Response as XML</title>
+	<script>
+	function getMovies() {
+		var xmlHttp = new XMLHttpRequest();
+		
+		xmlHttp.onload = function() {
+			if (xmlHttp.status == 200) {
+				
+                //key for challenge 9
+                var xmlDoc = xmlHttp.responseXML
+                
+                var output = "";
+                
+                //build output by parsing the xml
+                var movieTitles = xmlDoc.getElementsByTagName("title");
+                
+                // in challenge 9 you will need to get two elements by tag name
+                console.dir(movieTitles);
+                
+                for (var i = 0; i < movieTitles.length; i++) {
+                    output += movieTitles[i].childNodes[0].nodeValue + "<br>";
+                }
+                
+                var divObj = document.getElementById("movieBox");
+                
+                divObj.innerHTML = output;
+				
+				
+			}
+		}
+		
+		xmlHttp.open("GET", "movies.xml", true); //movies.xml -> instance address
+		xmlHttp.send();
+	}
+	</script>
+</head>
+<body>
+	<h1>My Movies</h1>
+	<div id="movieBox"></div>
+	<button type="button" onclick="getMovies()">Get Movie Titles</button>
+</body>
+</html>

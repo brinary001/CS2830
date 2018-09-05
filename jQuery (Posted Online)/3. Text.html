@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+		
+<!-- References: 
+		1) http://www.w3schools.com/jquery/html_val.asp		
+-->
+<html>
+    <head>
+        <title>jQuery Text</title>
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        <script>
+            function getUsername() {
+                console.log($("#user").attr("id") + " = " + $("#user").val());
+            }
+            function setUsername() {
+                $("#user").val("Sally");
+            }
+            function checkPassword() {
+                if ($("#password").val().length <= 8) {
+                    alert("The password is too short.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <div>
+                 <label for="user">Username:</label>
+                <input id="user" type="text" name="username" placeholder="Username">
+            </div> 
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+            <hr>
+            <button type="button" onclick="getUsername()">Get Username</button>
+            <button type="button" onclick="setUsername()">Set Username</button>
+            <button type="button" onclick="checkPassword()">Check Password</button>
+        </form>
+    </body>
+</html>

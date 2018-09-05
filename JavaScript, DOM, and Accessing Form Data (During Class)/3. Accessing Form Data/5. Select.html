@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how get data from a drop down menu, show you how to use 
+		inner HTML property, and how to set the selection from dropdown using Javascript -->
+
+<!-- References: 
+        1) http://www.w3schools.com/jsref/prop_html_innerhtml.asp
+        2) http://www.w3schools.com/jsref/prop_select_selectedindex.asp
+-->
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title>Accessing Dropdown Data</title>
+       	
+       	
+    </head>
+    <body>
+        <form action="#" method="POST">
+            
+            <!-- Select -->
+            <h3>What do you like to eat?</h3>
+            <select id="foods" name="foods">
+                <option value="baozi">BaoZi</option>
+                <option value="chicken">Chicken</option>
+                <option value="creamPies">Oatmeal Cream Pies</option>
+                <option value="chickalfredo">Chicken Alfredo</option>
+                <option value="poptarts" selected>Poptarts</option>
+                <option value="cheese">Cheese</option> 
+            </select>
+           
+            <hr>
+		
+            <button type="button" >Get Select</button>
+            <button type="button" >Set Select</button>
+        </form>
+    </body>
+</html>

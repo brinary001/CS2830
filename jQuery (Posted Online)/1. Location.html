@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+		
+<!-- References: 
+		1) http://www.w3schools.com/jquery/default.asp
+		2) http://www.w3schools.com/jquery/jquery_get_started.asp
+		3) http://www.w3schools.com/jquery/jquery_syntax.asp	
+-->
+<html>
+	<head>
+		<title>jQuery Location</title>  
+        
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+    
+        <!-- Or we can use a Content Distribution Network (CDN) -->
+        <!--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+        
+        <script>
+            console.dir(jQuery);
+            
+            console.dir($);
+            
+            var jq = $;
+            console.dir(jq);
+            	
+            // Reference: http://api.jquery.com/jQuery.noConflict/
+            $.noConflict();
+            
+			console.dir($);
+			
+			var $ = jQuery; 
+			console.dir($); 
+        </script>
+	</head>
+	<body>
+	</body>
+</html>

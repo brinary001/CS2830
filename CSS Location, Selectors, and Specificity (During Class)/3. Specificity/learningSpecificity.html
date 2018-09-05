@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<!-- The main purpose is to show you specificity (a word I can not say very easily),
+        Why specificity?  Because CSS priority is decided based on order and specificity
+-->
+
+<!-- Generally speaking:
+        We can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+        1) Inline style (inside the HTML element)
+        2) External and internal style sheets (in head element)
+            * whichever one is loaded last will be the one with highest priority
+        3) Browser Default
+
+<html>
+    <head>
+<title></title>
+</head>
+<body>
+    <div>
+        <h1 id="header" class="cool">Specificity determines what CSS is applied</h1>
+    </div>
+</body>
+</html>

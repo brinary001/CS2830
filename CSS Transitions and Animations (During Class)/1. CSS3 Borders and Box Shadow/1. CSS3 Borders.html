@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to use CSS borders and CSS box shadows on HTML 
+		elements, show you the different combinations, and how they look.-->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Borders</title>
+	<!--
+		References:
+			http://www.w3schools.com/css/css3_borders.asp
+			http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+	-->
+	<style>
+        .tab {
+            border: 10px solid steelblue;
+            width: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: orange;
+            text-align: center;
+            font-size: 2em;
+            
+            /*rounding all the corners*/
+            border-radius: 15px;
+            
+            /*square only the bottom*/
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            
+            /*shorthand way*/
+            /*numbers go clockwise left to right*/
+            border-radius: 30px 30px 0 0;
+        }
+        /*one value: all four corners*/
+        #corners1 {
+            border-radius: 15px;
+        }
+        /* four values:
+            1st -> top-left
+            2nd -> top-right
+            3rd -> bottom-right
+            4th -> bottom-left
+        
+        TEST QUESTION
+        */
+        #corners2 {
+            border-radius: 15px 50px 30px 5px;
+        }
+        /* three values:
+            1st -> top-left
+            2nd -> top-right and bottom-left
+            3rd -> bottom-right
+        */
+        #corners3 {
+            border-radius: 15px 50px 30px;
+        }
+        /* two values:
+            1st -> top-left and bottom-right
+            2nd -> top-right and bottom-left
+        */
+        #corners4 {
+            border-radius: 15px 50px;
+            
+        }
+        
+        .planet {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            
+            /* box shadow adds a 3d effect */
+            box-shadow: 0 0 50px blue
+        }
+        #corners5 {
+            border-radius: 50px/15px;
+        }
+        #corners6 {
+            border-radius: 15px/50px;
+        }
+        #corners7 {
+            border-radius: 50%;
+            box-shadow: -20px -20px 10px 20px blue;
+        }
+	</style>
+</head>
+    <body>
+        <p>Short Hand way of doing it</p>
+        <div class="tab">Corners</div>
+
+        <p>One Value = border-radius: 30px;</p>
+        <div id="corners1" class="tab">Corners 1</div>
+
+
+        <p>Four Values - border-radius: 15px 50px 30px 5px;</p>
+        <div id="corners2" class="tab">Corners 2</div>
+
+        <p>Three values - border-radius: 15px 50px 30px;</p>
+        <div id="corners3" class="tab">Corners 3</div>
+
+        <p>Two values - border-radius: 15px 50px</p>
+        <div id="corners4" class="tab">Corners 4</div>
+
+        <p>Defining the border radius with pixels</p>
+        <div class="planet"></div>
+
+        <p>Elliptical border - border-radius: 50px/15px;</p>
+        <div id="corners5" class="planet"></div>
+
+        <p>Elliptical border -border-radius: 15px/50px;</p>
+        <div id="corners6" class="planet"></div>
+
+        <br>
+        <br>
+        <p>Defining the border radius with percentage</p>
+        <p>Ellipse border - border-radius: 50%;</p>
+        <div id="corners7" class="planet"></div>   
+    </body>
+</html>

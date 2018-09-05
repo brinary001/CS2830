@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you what the position property is, how it works, and what it does. 
+		This will also show you how to properly use the z-index with position. -->
+	
+<!-- References: 
+		1) http://www.w3schools.com/css/css_positioning.asp
+		2) http://www.w3schools.com/cssref/pr_class_position.asp 
+		3) http://www.w3schools.com/cssref/pr_pos_z-index.asp
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Position</title>
+		
+	</head>
+	<body>
+		<div id="div1"></div>
+	
+		<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+		
+		<div id="div2">
+			<div id="mini"></div>
+		</div>
+		<div id="div3"></div>
+		
+		<p class="bottom">An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+
+		<div id="fixed"><p class="middle">This div element has position: fixed;</p></div>
+	</body>
+</html>
+
+
+
+
+
